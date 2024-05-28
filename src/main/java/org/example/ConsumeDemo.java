@@ -29,7 +29,9 @@ public class ConsumeDemo {
 
         List<String> nums2 = Arrays.asList();
         System.out.println(nums2.stream().findAny().orElseGet(()-> "hii"));
-        numbers.forEach();
+
+
+
     }
 
 }
