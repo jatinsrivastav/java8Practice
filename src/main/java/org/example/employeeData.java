@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,6 +19,16 @@ public class employeeData {
                 .collect(Collectors.toList());
         System.out.println(employees1);
 
+       /* Comparator<Employee> comparator = new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return o1.getSalary()- o2.getSalary();
+            }
+        };*/
+
+
+        System.out.println("sorted values");
+        employees.stream().sorted(((o1, o2) -> o1.getSalary()- o2.getSalary())).forEach(i->System.out.println(i));
 
 
 
